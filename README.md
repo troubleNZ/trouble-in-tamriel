@@ -3,7 +3,7 @@ Wabbajack modlist for Skyrim SSE AE.
 
 #
 ![image](https://user-images.githubusercontent.com/54466974/229329227-696481d5-4fa5-4f98-bab6-2f30e1fcdee4.png)
-#
+# About
 
 A clean, immersive, streamlined Skyrim Experience, incorporating the best compatible mods , merged into a user-friendly and easy to manage package.
 
@@ -28,6 +28,102 @@ The Skyrim we know and love has been embued with remastered textures and lightin
 
 - Bug fixes and streamlined quests ensure the smoothest skyrim experience you've ever had.
 
+
+## Overview of the Mods loaded
+This is a non-exhaustive list of the mods included in this wabbajack pack.</br>
+Download the package to see the entire list (306 plugins enabled, 253 mods loaded)
+
+### AI:
+- Immersive College NPCs
+- AI Overhaul
+- AI Homestead Pathing
+#
+### NPC Upgrades:
+- Bodyslide and Outfit Studio
+- High Poly Head 1.4
+
+#### Female:
+- ColdSuns Female NPCs
+- CBBE 3BA Body
+
+#### Male:
+- Pride of Skyrim Male NPCs
+- Tempered Skins SOS Full Version
+- Beards of Power
+- Sons of Skyrim NPC Guard Armor Replacer
+- Cloaks and Capes
+- Cloaks of Skyrim + Winter is Coming
+- Divine Elegance clothes, jewellery and shop
+
+#### Orphans:
+- Realistic Children NPC Overhaul 
+- Realistic Elven Children
+#
+### Body/Face/Hair:
+- KS Hairdos - Hairstyles for male and female
+- Vanilla Hair remake
+- Makeup and Warpaint
+- Eyes and Brows
+- Freckles, Scars, Moles etc
+- RaceMenu
+#
+### Dragons:
+- Diverse Dragons
+- Splendor Dragon Variations
+- Talking Dragons
+#
+### DLC Updates:
+- Vampire and Falmer changes
+- Werewolf fixes
+- Legend of the Dragonborn
+#
+### World Updates:
+- Summerset Island
+- Beyond Skyrim - Bruma
+- Terrain subdivision
+- Sounds of Skyrim Ambient sounds
+#
+### City Updates:
+- WhiteRun (JK's Whiterun, Trees and Streets)
+- Fort Dawnguard 4K
+- Ultimate College of Winterhold
+- Solitude: Legacy of the Dragonborn Gallery
+- Markarth
+#
+### Weather:
+- Obsidian Weather
+- True Storms
+- Wonders of Weather - rainbows/shooting stars/raindrop splashes
+- Lightning Storms
+#
+### HQ 4k Upscaling:
+- Landscapes/Mountains
+- Trees, foliage, clutter
+- 4k Dragon Skeleton
+- Flame / Embers / Snow / Ice / Water
+- Roads
+- DynDOLOD / Billboard Textures
+- Immersive Artifacts
+- High Hrothgar
+- Statues of Skyrim
+- Quest Items
+#
+### Clothes / Armor / Weapons / Effects / Monsters:
+- Apachii's Divine Elegance Clothing
+- Project Clarity HQ Clothes
+- Project Clarity HQ Weapons
+- Project Clarity HQ Armor
+- Project Clarity HQ Effects
+- Project Clarity HQ Creatures
+#
+### Extras:
+- Assorted Bugfixes
+- Compatibility Patches
+- Map enhanced with roads and details
+- NPC Follower fixes
+- Joy of Perspective (better first person)
+- Smart Soul Trap
+- Enable Steam Achievements
 
 # Screenshots
 ![image](https://i.imgur.com/m8xkzwI.jpg)
