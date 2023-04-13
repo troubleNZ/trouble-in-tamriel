@@ -3,6 +3,31 @@ Wabbajack modlist for Skyrim SSE AE.
 
 #
 ![image](https://user-images.githubusercontent.com/54466974/229329227-696481d5-4fa5-4f98-bab6-2f30e1fcdee4.png)
+
+#
+### Contents
+<table>
+  <tr>
+		<td>
+      <ul>
+      <li><a href="https://github.com/troubleNZ/trouble-in-tamriel#about">About</a></li>
+      <li><a href="https://github.com/troubleNZ/trouble-in-tamriel#overview-of-the-mods-loaded">Overview</a></li>
+      <li><a href="https://github.com/troubleNZ/trouble-in-tamriel#ai">AI</a></li>
+      <li><a href="https://github.com/troubleNZ/trouble-in-tamriel#npc-upgrades">NPC Upgrades</a></li>
+      <li><a href="https://github.com/troubleNZ/trouble-in-tamriel#bodyfacehair">Body Face and Hair</a></li>
+      <li><a href="https://github.com/troubleNZ/trouble-in-tamriel#dragons">Dragons</a></li>
+      <li><a href="https://github.com/troubleNZ/trouble-in-tamriel#dlc-updates">DLC Updates</a></li>
+      <li><a href="https://github.com/troubleNZ/trouble-in-tamriel#world-updates">World Updates</a></li>
+      <li><a href="https://github.com/troubleNZ/trouble-in-tamriel#city-updates">City Updates</a></li>
+      <li><a href="https://github.com/troubleNZ/trouble-in-tamriel#weather">Weather</a></li>
+      <li><a href="https://github.com/troubleNZ/trouble-in-tamriel#hq-4k-upscaling">HD Up-Scaling / 4K</a></li>
+      <li><a href="https://github.com/troubleNZ/trouble-in-tamriel#clothes--armor--weapons--effects--monsters">Clothes / Armor / Weapons / Effects / Monsters</a></li>
+      <li><a href="https://github.com/troubleNZ/trouble-in-tamriel#extras">Extras</a></li>
+      </ul> 
+    </td>
+  </tr>
+</table>
+
 # About
 
 A clean, immersive, streamlined Skyrim Experience, incorporating the best compatible mods , merged into a user-friendly and easy to manage package.
