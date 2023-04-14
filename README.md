@@ -39,7 +39,7 @@ After deploying <b>Trouble in Tamriel</b> ModList for The Elder Scrolls V: Skyri
 (2k, 1k versions of many included mods are also available for lower end systems).
 I've intentionally left out some well known expansions due to their poor quality or no support for Anniversary Edition (sorry Moonpath).
 
-Most of these mods are available free on nexusmods, a couple are offsite at their respective sites linked in the [downloads](https://github.com/troubleNZ/trouble-in-tamriel/edit/main/README.md#mods-download-list---alphabetical) list at the end of this document.
+Most of these mods are available free on nexusmods, a couple are offsite at their respective sites linked in the [downloads](https://github.com/troubleNZ/trouble-in-tamriel#mods-download-list---alphabetical) list at the end of this document.
 
 The Skyrim we know and love has been embued with remastered textures and lighting for almost all environments in the world of Nirn, including many of the daedric planes of existence, brought to life in stunning vibrancy.(1k, 2k, 4k and even 8k textures are available if you have enough VRAM)
 
