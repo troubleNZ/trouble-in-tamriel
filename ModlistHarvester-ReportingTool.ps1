@@ -4,7 +4,7 @@
 #                   - Ralof (4E 201)
 
 # Author:   TroubleshooterNZ#0001
-# Version:  v1.0.0
+# Version:  v1.0.5
 # Repo:     https://github.com/troubleNZ/trouble-in-tamriel
 #---------------------------------------------------//---------------------------------------------
 # PURPOSE:
@@ -123,46 +123,67 @@ if ([int]$data.Count -gt [int]$myMetas.Count) { $max = $myMetas.Count;}
 
 $results = for ($i = 0; $i -lt $max; $i++)
 {
+    Write-Progress -Activity "Query in Progress" -Status "($i/$max) Complete:" -PercentComplete (($i/$max)*100)
+    
     if ($verbose) {Write-Verbose "$($data[$i]),$($myMetas[$i].DirectoryName)"}
     [PSCustomObject]@{
         installedFiles = $data[$i].installedFiles
         General = $data[$i].General
         Directory = $myMetas[$i].Directory.Name
     }
+    Start-Sleep -Milliseconds 0
 }
-$results
 
-if ($GenerateCSV) {
-    # csv output file headers
-    $csvHeader = "modID,fileID,Name,URL"
-    $OutputFile = 'myInstalledMods.csv'
-    $csvHeader | Set-Content $OutputFile  # CLOBBERS 
-                    
-    # process the data and write to csv file
-    $results | ForEach-Object {
-            $a = $_.installedFiles["1\modid"]                               #$_["installedFiles"]["1\modid"]
-            $b = $_.installedFiles["1\fileid"]                              #$_["installedFiles"]["1\fileid"]
-            $c = $_.Directory                                               #$myMetas[$i].DirectoryName
-            $link = $aurl[0]+$gameName+$aurl[1]+$a+$aurl[2]+$b+$aurl[3]
-            #$_["installedFiles"].Values
-            $concat = $a+","+$b+","+$c+","+$link
-            $concat | Add-Content $OutputFile
+if ($results) {
+     # csv output file headers
+     $csvHeader = "modID,fileID,Name,URL"
+     $OutputFile = 'myInstalledMods.csv'
+     if ($GenerateCSV) {
+     $csvHeader | Set-Content $OutputFile  # CLOBBERS 
     }
-}
-if ($GenerateMarkDown) {
+    if ($GenerateMarkDown) {
     # markdown output file headers
     $mdheader[0] | Set-Content  $mdFilename     #CLOBBER
     $mdheader[1] | Add-Content $mdFilename
-
-    # build for markdown
+    }
+    # build results table
     $results | ForEach-Object {
-        $a = $_.installedFiles["1\modid"]                                   #$_["installedFiles"]["1\modid"]
-        $b = $_.installedFiles["1\fileid"]                                  #$_["installedFiles"]["1\fileid"]
-        $c = $_.Directory                                                   #$myMetas[$i].DirectoryName
-        $link = $aurl[0]+$a+$aurl[1]+$b+$aurl[2]
-        $hyper = "[Link]($link)"
-        $concat = "|"+$a+"|"+$b+"|"+$c+"|"+$hyper+"|"
+        if ($null -ne $_.installedFiles["1\modid"] -and $null -ne $_.installedFiles["1\fileid"]){
+            $a = $_.installedFiles["1\modid"]                                   #$_["installedFiles"]["1\modid"]
+            $b = $_.installedFiles["1\fileid"]                                  #$_["installedFiles"]["1\fileid"]
+            $c = $_.Directory.ToString()
+            $link = $aurl[0]+$gameName+$aurl[1]+$a+$aurl[2]+$b+$aurl[3]
+            $hyper = "[Download]($link)"
+            $concat = "|"+$a+"|"+$b+"|"+$c+"|"+$hyper+"|"
+            $concatcsv = $a+","+$b+","+$c+","+$link
+        } elseif ($null -ne $_.General["modid"] ) {
+            $a = $_.General["modid"]                                    #$_["installedFiles"]["1\modid"]
+            $b = "0"                                                    #$_["installedFiles"]["1\fileid"]
+            $c = $_.Directory.ToString()
+            $link = $aurl[0]+$gameName+$aurl[1]+$a
+            if ($null -ne $_.General["url"]) {
+                $tempurl = $_.General["url"]
+                $hyper = "[About]($tempurl)"
+                $concat = "|"+$a+"|"+$b+"|"+$c+"|"+$hyper+"|"
+            } elseif ($null -eq $_.General["url"] -Or $c -contains "_separator") {
+                #$tempurl = "Category Separator"
+                #$hyper = ""
+                $concat = "|"+$a+"|"+$b+"|"+$c+"|Spacer|"
+                $concatcsv = [string]$a+","+[string]$b+","+$c+","+"Category spacer"
+            } else {
+                $concat = "|"+$a+"|"+$b+"|"+$c+"|"+$link+"|"
+                $concatcsv = [string]$a+","+[string]$b+","+$c+","+$link
+            }
+            
+            $concatcsv = [string]$a+","+[string]$b+","+$c+",,"
+        }
+        if ($GenerateMarkDown) {
         $concat | Add-Content $mdfilename
+        } 
+        if ($GenerateMarkDown) {
+        $concatcsv | Add-Content $OutputFile
+        }
     }
 }
 ((Get-Date -UFormat %s) - $ostime).ToString() +" seconds to generate." | Write-Host
+
